@@ -15,7 +15,7 @@ import org.sekhar.singleton.staticinner.SingletonStaticInner;
 /**
  * Unit tests for the singleton synchronization package with the same name.
  * 
- * @author Donato Rimenti
+
  *
  */
 public class SingletonSynchronizationIntegrationTest {
@@ -30,9 +30,7 @@ public class SingletonSynchronizationIntegrationTest {
 	 */
 	private static final int TASKS_TO_SUBMIT = 1000000;
 
-	/**
-	 * Tests the thread-safety of {@link SingletonSynchronization}.
-	 */
+
 	@Test
 	public void givenSingletonSynchronization_whenMultithreadInstancesEquals_thenTrue() {
 		ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
@@ -51,9 +49,6 @@ public class SingletonSynchronizationIntegrationTest {
 		Assert.assertEquals(1, resultSet.size());
 	}
 	
-	/**
-	 * Tests the thread-safety of {@link DoubleCheckLockingSynchronizeSingleton}.
-	 */
 	@Test
 	public void givenDclSingleton_whenMultithreadInstancesEquals_thenTrue() {
 		ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
@@ -69,9 +64,6 @@ public class SingletonSynchronizationIntegrationTest {
 		Assert.assertEquals(1, resultSet.size());
 	}
 
-	/**
-	 * Tests the thread-safety of {@link EarlyInitSingleton}.
-	 */
 	@Test
 	public void givenEarlyInitSingleton_whenMultithreadInstancesEquals_thenTrue() {
 		ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
@@ -87,9 +79,6 @@ public class SingletonSynchronizationIntegrationTest {
 		Assert.assertEquals(1, resultSet.size());
 	}
 
-	/**
-	 * Tests the thread-safety of {@link InitOnDemandSingleton}.
-	 */
 	@Test
 	public void givenInitOnDemandSingleton_whenMultithreadInstancesEquals_thenTrue() {
 		ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
@@ -105,9 +94,6 @@ public class SingletonSynchronizationIntegrationTest {
 		Assert.assertEquals(1, resultSet.size());
 	}
 
-	/**
-	 * Tests the thread-safety of {@link EnumSingleton}.
-	 */
 	@Test
 	public void givenEnumSingleton_whenMultithreadInstancesEquals_thenTrue() {
 		ExecutorService executor = Executors.newFixedThreadPool(POOL_SIZE);
